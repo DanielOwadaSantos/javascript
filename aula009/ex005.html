@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background-color: rgb(30, 80, 130);
+            color: white;
+            font: normal 18pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+    <div>Clique em mim</div>
+    <script>
+        window.document.write('Olá, mundo!<br>') 
+        window.document.write(window.document.charset + '<br>')
+        window.document.write(window.navigator.appName + '<br>')
+        window.document.write(window.document.URL + '<br>')/*Este URl deve ser maiúsculo para funcionar*/
+        var p1 = window.document.getElementsByTagName('p')[1]/*Foi usado o colchete com números pois são dois parágrafos (Elements no plural) como child e é preciso informar qual parágrafo deseja ser mostrado*/
+        window.document.write('Este escrito: ' + p1.innerText + '<br>')
+        p1.style.color = 'blue'
+        var corpo = window.document.body
+        corpo.style.background = 'black'
+        document.write(p1.innerHTML)/*Aqui se usar innerText não sera mostrado a parte html, ou seja, não irá mostrar o negrito em 'DOM' pois ele não pega a parte dos childs, porém ao usar innerHtml será mostrado o texo comm foi feito na sua origem pegando todos elemtos */
+    </script>
+</body>
+</html>
