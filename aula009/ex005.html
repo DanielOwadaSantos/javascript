@@ -13,10 +13,10 @@
     </style>
 </head>
 <body>
-    <h1>Iniciando estudos DOM</h1>
-    <p>Aqui vai o resultado</p>
+    <h1 id="msg3">Iniciando estudos DOM</h1>
+    <p class="msg2">Aqui vai o resultado</p>
     <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
-    <div>Clique em mim</div>
+    <div id="msg">Clique em mim</div>
     <script>
         window.document.write('Olá, mundo!<br>') 
         window.document.write(window.document.charset + '<br>')
@@ -28,6 +28,15 @@
         var corpo = window.document.body
         corpo.style.background = 'black'
         document.write(p1.innerHTML)/*Aqui se usar innerText não sera mostrado a parte html, ou seja, não irá mostrar o negrito em 'DOM' pois ele não pega a parte dos childs, porém ao usar innerHtml será mostrado o texo comm foi feito na sua origem pegando todos elemtos */
+        var div = window.document.getElementById('msg')
+        div.style.background = 'green'
+        div.innerText = 'Estou aguardando...'
+        window.document.getElementById('msg').innerText = 'Olá'
+        var class1 = window.document.getElementsByClassName('msg2')[0]
+        class1.innerText = 'Mudei o texto'
+        class1.style.background = 'yellow'
+        var idh1 = window.document.querySelector('h1#msg3')/*use '#' para selecionar id e '.' para selecionar class assim como é feito em css*/ 
+        idh1.style.background = 'purple'
     </script>
 </body>
 </html>
