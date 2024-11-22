@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cidadania</title>
+</head>
+<body>
+    <h1>Teste de cidadania</h1>
+    País que você vive: <input type="text" name="país" id="país">
+    <input type="button" value="Verificar" onclick="teste">
+    <div id="resposta">
+
+    </div>
+    <script>
+        function teste(){
+            var respaís = document.querySelector('input#país')
+            var respota = document.querySelector('div#resposta')
+            var paísres = respaís
+            resposta.innerHTML = `<p>Atualmente você vive no <strong>${paísres}</strong>.</p>`
+            if (país != Brasil){
+                resposta.innerHTML += 'Você é estrangeiro.'
+            }
+            else{
+                resposta.innerHTML = 'Você é brasileiro'
+            }
+        }
+    </script>
+</body>
+</html>
