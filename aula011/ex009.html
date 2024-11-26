@@ -16,11 +16,11 @@
         function teste(){
             var respaís = document.querySelector('input#país');
             var respota = document.querySelector('div#resposta');
-            if (país != Brasil){
-                respota.textContent = 'Você é estrangeiro.';
+            if (país == 'Brasil'){
+                respota.innerHTML = 'Você é brasileiro.';
             }
             else{
-                respota.textContent = 'Você é brasileiro';
+                respota.innerHTML = 'Você é estrangeiro.';
             }
         }
     </script>
