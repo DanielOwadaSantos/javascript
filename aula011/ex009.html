@@ -14,15 +14,16 @@
     </div>
     <script>
         function teste(){
-            var respaís = document.querySelector('input#país');
+            var respaís = document.querySelector('input#país').value;
             var respota = document.querySelector('div#resposta');
-            if (país == 'Brasil'){
+            var país2 = respaís.value
+            if (país2 === 'Brasil'){
                 respota.innerHTML = 'Você é brasileiro.';
             }
             else{
-                respota.innerHTML = 'Você é estrangeiro.';
+                respota.innerHTML = 'Você é estrangeiro .';
             }
-        }
+        }   
     </script>
 </body>
 </html>
